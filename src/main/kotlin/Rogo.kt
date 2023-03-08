@@ -20,6 +20,10 @@ fun main() {
         val quality = readLine()!!.toInt()
         orders.add(Order(menu[menuIndex], quality))
 
+        print("Lanjutkan Pesan? (ya/ga)")
+        val jawab = readLine()!!
+        isOrdering = jawab.equals("ya", ignoreCase = true)
+
         var totalPrice = 0
         for (order in orders) {
             totalPrice += order.getTotalPrice()
